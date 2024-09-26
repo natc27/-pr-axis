@@ -77,6 +77,7 @@ function draw() {
     Object.keys(body[id].now).forEach((joint) => {
       push();
       let v = body[id].now[joint];
+      console.log(v); 
       translate(v[0], v[1], v[2]);
       sphere(2, 4, 4);
       pop();

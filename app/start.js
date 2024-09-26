@@ -47,28 +47,7 @@ if (isHelp) {
   settings = settings || new Settings(Settings.default);
   log.info(`Start: Settings are ${settings.label}`);
 
-  if (argv['mode'] !== undefined) {
-    switch (argv['mode']) {
-      case 'stream':
         log.info('Start: Mode selected is stream, starting with Stream class.');
-        new Stream(settings);
-        break;
-      case 'load':
-        log.info('Start: Mode selected is load, starting with Load class.');
-        new Load(settings);
-        break;
-      case 'streamload':
-        log.info('Start: Mode selected is streamload, starting with StreamLoad class.');
-        new StreamLoad(settings);
-        break;
-      case 'sim': /** TODO new Sim(options); */
-      default:
-        log.info(`Start: Mode selected is unknown ${argv['mode']} starting with Load class as default.`);
-        new Load(settings);
-        break;
-    }
-  } else {
-    log.info(`Start: No Mode selected, starting with Load class as default.`);
-    new Load(settings);
-  }
+        new Stream(settings); 
+
 }
